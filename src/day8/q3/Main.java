@@ -1,41 +1,36 @@
 package day8.q3;
 
-interface Hotel{
-    void chickenBiryani();
-    void masalaDosa();
-}
-class TajHotel implements Hotel{
-    @Override
-    public void chickenBiryani() {
-        System.out.println("Biryani from Taj Hotel");
-    }
-
-    @Override
-    public void masalaDosa() {
-        System.out.println("MasalaDosa from Taj Hotel");
-    }
-}
-class RoadSideHotel implements Hotel{
-    @Override
-    public void chickenBiryani() {
-        System.out.println("Biryani from Road Side Hotel");
-
-    }
-
-    @Override
-    public void masalaDosa() {
-        System.out.println("MasalaDosa from Road Side Hotel");
-
-    }
-}
+import java.util.Scanner;
 
 public class Main {
+    public Hotel provideFood(int amt) {
+        TajHotel tajHotel = new TajHotel();
+        RoadSideHotel roadSideHotel = new RoadSideHotel();
+        if (amt > 1000) {
+            return tajHotel;
+        } else if (amt > 200 && amt < 1000) {
+            return roadSideHotel;
+        } else {
+            return null;
+        }
+    }
     public static void main(String[] args) {
-TajHotel tajHotel = new TajHotel();
-RoadSideHotel roadSideHotel = new RoadSideHotel();
- tajHotel.chickenBiryani();
- tajHotel.masalaDosa();
- roadSideHotel.chickenBiryani();
- roadSideHotel.masalaDosa();
+        Main obj = new Main();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Amount");
+        int amt = sc.nextInt();
+       Hotel hotel = obj.provideFood(amt);
+
+        if(hotel instanceof TajHotel) {
+            hotel.chickenBiryani();
+            hotel.masalaDosa();
+            //Down casting to use the specific method of TajHotel Object
+            ((TajHotel) hotel).welcomeDrink();
+        } else if  (hotel instanceof RoadSideHotel) {
+            hotel.chickenBiryani();
+            hotel.masalaDosa();
+        } else {
+            System.out.println("Please Enter a valid amount");
+        }
     }
 }
