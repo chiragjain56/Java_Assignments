@@ -10,8 +10,8 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        int count = 0;
-        while(count<4){
+        int count = 1;
+        while(count<=4){
             System.out.println("Enter the details of Employee"+count++);
 
             System.out.println("Enter Employee id");
