@@ -15,6 +15,7 @@ public class Main {
         linkedHashMap.put("West Bengal","Kolkata");
 
         Set<Map.Entry<String ,String>> set = linkedHashMap.entrySet();
+
         for (Map.Entry<String ,String> key:set) {
             System.out.println( "Capital of " + key.getKey() + " is " + key.getValue());
         }
