@@ -1,0 +1,58 @@
+Q.1 What is normalization and why it is needed?
+Ans.
+Normalization:-
+        		Normalization is the technique for organizing the data in database. it helps to minimize redundany y (duplication), insertion anomaly, update anomaly & deletion anomaly.
+   =
+     The most commonly used normal forms:
+
+     		1)First normal form(1NF)
+     		2)Second normal form(2NF)
+     		3)Third normal form(3NF)
+
+
+     First normal form:-
+     			criteria:- 1) the data are stor in a two dimensional table.
+     				       2) there are no repeating groups.
+
+     In first normal form every column is unique, also don'nt  have any repeating columns or data groups.
+
+
+     DRAWBACKS:-  Repeating value consumes a lot of extra memory.
+
+     Second normal form:-
+     		Conditions of 2Nf:-
+     					table is in 1NF
+     					No non-prime attributs is depentent on the prorper subset of any candidate key of table.
+
+ //========================================================================================================================================================================
+
+
+Q.2 Explain the 3NF with an example.
+ Ans.
+* Table must be in 2NF and not contain any transitive partial dependency.
+* 3NF is used to reduce the data duplication. It is also used to achieve the data integrity.
+* If there is no transitive dependency for non-prime attributes, then the relation must be in 3NF.
+
+EMPLOYEE_DETAIL table:
+ EMP_ID | EMP_NAME   |	EMP_ZIP	 | EMP_STATE  |	EMP_CITY
+   222  |   Chirag   |  313001   |    Raj     | Udaipur
+   333  |   Aarti    |  124001   |    HR      | Rohtak
+   444  |   Abhishek |  124002   |    HR      | Yamuna Nagar
+   555  |   Jatin    |  413001   |    MP      | Indor
+   666  |   jay      |  632541   |    Guj     | Ahamdabad
+
+EMPLOYEE table:
+  EMP_ID |  EMP_NAME  |	EMP_ZIP
+   222   |   Chirag   |  313001
+   333   |   Aarti    |  124001
+   444   |   Abhishek |  124002
+   555   |   Jatin    |  413001
+   666   |   jay      |  632541
+
+EMPLOYEE_ZIP table:
+   EMP_ZIP	| EMP_STATE  |	EMP_CITY
+   313001   |    Raj     | Udaipur
+   124001   |    HR      | Rohtak
+   124002   |    HR      | Yamuna Nagar
+   413001   |    MP      | Indor
+   632541   |    Guj     | Ahamdabad
