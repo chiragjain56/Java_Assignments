@@ -1,7 +1,6 @@
 package Unit5.SolidPrincipals.dip;
 
-public class DebitCard implements BankCard{
-
+public class DebitCard implements BankCard {
     public void doTransaction(long amount){
         System.out.println("payment using Debit card");
     }
