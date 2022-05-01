@@ -13,11 +13,13 @@ public class ShoppingMall {
     }
 
     public static void main(String[] args) {
-       // DebitCard debitCard=new DebitCard();
+//        DebitCard debitCard=new DebitCard();
        // CreditCard creditCard=new CreditCard();
 
-        BankCard bankCard=new CreditCard();
+        BankCard bankCard=new DebitCard();
+
+
         ShoppingMall shoppingMall=new ShoppingMall(bankCard);
-        shoppingMall.doPurchaseSomething(5000);
+        shoppingMall.doPurchaseSomething(500);
     }
 }
