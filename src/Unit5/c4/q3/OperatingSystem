@@ -1,0 +1,47 @@
+Q3. What is an operating system and give examples. Also, discuss its main functions
+and responsibility (at least 6).
+Ans:
+It is an interface between a computer user and computer hardware.
+it is a software which performs all the tasks like file management, memory management,
+process management ,handling input and output and controll perpheral devices like pen drives,
+printer, pentablet etc.
+
+some os are Linux os, windows ,IOS;
+
+Important function:
+
+1.memory management:
+
+It keeps tracks of primary memory, which parts of it is in use by whom and
+in multiprogramming, the OS decides which process will get memory when and how
+much and
+allocates and de-allocates the memory when a process is terminated.
+
+
+2.Device Management
+
+It manages communication by their respective drivers.
+it keeps track of all devices and decides which process gets the device when and for how much time;
+allocates and de-allocates the devices in efficient way.
+
+3.Security
+
+By username and password ,it prevents unauthorized access to programs and data.
+
+4.Control over system performance
+
+Its records the time dalays b/w request for a service and response from a system.
+
+5.Processor Management
+
+In it ,OS decides which process gets the processor when and for how much time
+It Keeps tracks of processor and status of process.
+allocates and de-allocates the processes in efficient way.
+
+6.File Management
+
+It is organized into directories for easy navigation and usage.
+
+it keeps track of information, location, uses, status .
+Decides who gets the resources.
+allocates and de-allocates the resources.

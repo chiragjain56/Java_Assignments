@@ -1,0 +1,29 @@
+Q2. What is CAP theorem, discuss a scenario where CAP theorem helps you choose a
+technology over the other or helps you make a design decision.
+
+Ans: CAP--> Consistency , Availability, Partition Tolerance;
+
+According to cap theoram ,
+a distributed database system can only guarantee two out of these characteristics: Consistency, Availability, and Partition Tolerance.
+
+lets take one scenario:
+In a multi-master architecture(allows data to be stored by a group of computers ), data can be written in
+multiple nodes.
+suppose there are two nodes in data base ,when a message is write to Node A syncs the update with Node B,
+and read requests sent to either of the two nodes will return the updated result.
+
+                         -------------------------
+                         |       Database        |
+        *client -------->| NodeA<--------->NodeB |
+                         |                       |
+                         -------------------------
+
+If there is a network partition between Node A and Node B, then updates cannot be synced.
+Node B wouldn’t know that Node A received an update, and Node A wouldn’t know if Node B received an update.
+The behavior of either node after receiving a write request depends on whether the database prioritizes consistency or availability.
+
+                         ---------------------------
+                         |       Database          |
+        *client ---?---> |  NodeA<-----X---->NodeB |
+                         |                         |
+                         ---------------------------
