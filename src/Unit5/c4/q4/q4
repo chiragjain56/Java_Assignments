@@ -1,11 +1,52 @@
 Q4
 a) What do you know about client server architecture?
 
+Client server architecture is a computing model has two basic components, a client and a server.
+
+Client: The one that requests services. e.g. web browser, mobile app etc
+Server: The one that supplies the requested services by the client. Application
+Server, DB server, Rest Endpoint.
+
+example:
+Mail servers, file servers, web servers etc
+
+//=============================================================================
 
 b) What is caching, explain its use cases.
 
+Caches are used to store temporary files, using hardware and software components.
+
+uses:
+1.to increase data retrieval performance by reducing the need to access the underlying slower storage layer.
+2.Trading off capacity for speed
+3. its store a subset of data transiently.
+
+//=============================================================================
 
 c) what are web sockets where it is used.
 
+WebSockets allow both the server and the client to push messages at any time without
+any relation to a previous request.
+it is used in:
+Collaborative editing/coding. Multiplayer games. Location-based apps.
+
+//=============================================================================
 
 d) How are public and private keys used in encryption and decryption?
+
+Public and private keys form the basis for public key cryptography(asymmetric cryptography).
+In public key cryptography, every public key matches to only one private key. Together, they are used to encrypt and decrypt messages.
+If you encode a message using a person’s public key, they can only decode it using their matching private key.
+
+below explaination make more clear:
+
+Private Key
+The private key is used to both encrypt and decrypt the data.
+This key is shared between the sender and receiver of the encrypted sensitive information.
+The private key is also called symmetric being common for both parties. Private key cryptography is faster than public-key cryptography mechanism.
+
+Public Key
+The public key is used to encrypt and a private key is used decrypt the data.
+The private key is shared between the sender and receiver of the encrypted sensitive information.
+The public key is also called asymmetric cryptography.
+
